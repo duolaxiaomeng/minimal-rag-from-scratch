@@ -9,7 +9,8 @@
 ## 1. 安装依赖
 
 ```powershell
-cd C:\Users\14431\Documents\Codex\2026-06-01\files-mentioned-by-the-user-pdf\work\minimal_rag
+git clone https://github.com/duolaxiaomeng/minimal-rag-from-scratch.git
+cd minimal-rag-from-scratch
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
@@ -22,7 +23,7 @@ pip install -r requirements.txt
 注意：目前这个最小学习版只用 MiMo 负责“生成回答”。检索阶段先使用本地 `local_hash_embedding()` 生成简单向量，这样你只需要一个 MiMo API Key 就能跑通完整 RAG 流程。
 
 ```powershell
-$env:MIMO_API_KEY="你的apikey"
+$env:MIMO_API_KEY="your_api_key_here"
 ```
 
 如果你的 Key 是 Coding Plan / Token Plan，一般是 `tp-xxxxx` 开头。代码会自动使用中国区 Token Plan 地址：
